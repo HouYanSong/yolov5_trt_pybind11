@@ -25,9 +25,9 @@ def main(input_path, output_path):
     fps = int(cap.get(cv2.CAP_PROP_FPS))
     width = int(cap.get(cv2.CAP_PROP_FRAME_WIDTH))
     height = int(cap.get(cv2.CAP_PROP_FRAME_HEIGHT))
-    writer = cv2.VideoWriter(output_path, cv2.VideoWriter_fourcc(*'MJPG'), 
-                             fps, (width, height))    
-
+    detector = yolov5_trt.YOLOv5Detector("./weights/yolov5s.engine", width, height)
+    writer = cv2.VideoWriter(output_path, cv2.VideoWriter_fourcc(*'MJPG'), fps, (width, height))    
+    
     fps_list = []
     frame_count = 0
     total_time = 0.0
@@ -64,7 +64,6 @@ def main(input_path, output_path):
 
 
 if __name__ == "__main__":
-    detector = yolov5_trt.YOLOv5Detector("./weights/yolov5s.engine")
     input_video = "./media/sample_720p.mp4"  
     output_video = "./result.avi"  
     main(input_video, output_video)

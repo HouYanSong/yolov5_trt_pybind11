@@ -81,11 +81,12 @@ private:
     std::unique_ptr<nvinfer1::IExecutionContext> context;
     std::unique_ptr<samplesCommon::BufferManager> buffers;
     bool initialized = false;
-    int img_size;
 
 public:
-    YOLOv5Detector(const std::string& engine_file) {
+    YOLOv5Detector(const std::string& engine_file, int frame_width, int frame_height) {
         initialize(engine_file);
+        int img_size = frame_width * frame_height;
+        cuda_preprocess_init(img_size); // 申请cuda内存
     }
     
     void initialize(const std::string& engine_file) {
@@ -126,11 +127,6 @@ public:
             throw std::runtime_error("Invalid input image");
         }
         
-        int width = frame.cols;
-        int height = frame.rows;
-        img_size = width * height;
-        cuda_preprocess_init(img_size);
-        
         // CUDA预处理
         process_input_gpu(frame, (float *)buffers->getDeviceBuffer(kInputTensorName), input_w, input_h);
         
@@ -170,7 +166,10 @@ PYBIND11_MODULE(yolov5_trt, m) {
     m.doc() = "YOLOv5 TensorRT Python bindings";
     
     py::class_<YOLOv5Detector>(m, "YOLOv5Detector")
-        .def(py::init<const std::string&>(), "Initialize detector with engine file")
+        .def(py::init<const std::string&, int, int>(), "Initialize detector with engine file",
+            py::arg("engine_file"),
+            py::arg("frame_width"),
+            py::arg("frame_height"))
         .def("detect", &YOLOv5Detector::detect, "Perform detection on input image",
             py::arg("input_image"), 
             py::arg("input_w") = kInputW, 
