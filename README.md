@@ -8,7 +8,7 @@
 
 这个项目提供了基于 `Pybind11` 的 `TensorRT YOLOv5` 插件 `Python` 绑定，实现了令人难以置信的**实时目标检测性能**！
 
-- **⚡ 超100FPS性能**: 在 `Jetson Orin Nano` 上轻松实现超过 `100` 帧/秒的检测速度
+- **⚡ 超100FPS性能**: 在 `Jetson Orin Nano` 上轻松实现超过 `120` 帧/秒的检测速度
 - **🎯 高精度检测**: 基于成熟的 `YOLOv5` 架构，准确识别`COCO`数据集上的`80`类目标
 - **🔌 即插即用**: 简单的 `Python` 接口，无需复杂的配置
 - **🛠️ 工业级优化**: 采用 `TensorRT` 进行模型优化和加速
@@ -301,92 +301,20 @@ Engine build success!
 ```
 
 ### Python call example
-```python
-import cv2
-import time
-import ctypes
-ctypes.CDLL("./build/libyolo_plugin.so", mode=ctypes.RTLD_GLOBAL)
-ctypes.CDLL("./build/libyolo_utils.so", mode=ctypes.RTLD_GLOBAL)
-from build import yolov5_trt
-    
-
-def draw_detections(image, detections, fps):
-    for detection in detections:
-        class_id = detection['class_id']
-        x1, y1, x2, y2 = detection['bbox']
-        confidence = detection['confidence']
-        cv2.rectangle(image, (x1, y1), (x2, y2), (0x27, 0xC1, 0x36), 2)
-        cv2.putText(image, f"{class_id}:{confidence:.2f}", (x1, y1 - 10), 
-                    cv2.FONT_HERSHEY_PLAIN, 1.2, (0x27, 0xC1, 0x36), 2)
-        
-    cv2.putText(image, f"FPS: {fps:.2f}", (10, 30), 
-                cv2.FONT_HERSHEY_PLAIN, 1.5, (0, 0, 255), 2)
-        
-    return image
-
-def main(input_path, output_path):
-    cap = cv2.VideoCapture(input_path)
-    fps = int(cap.get(cv2.CAP_PROP_FPS))
-    width = int(cap.get(cv2.CAP_PROP_FRAME_WIDTH))
-    height = int(cap.get(cv2.CAP_PROP_FRAME_HEIGHT))
-    writer = cv2.VideoWriter(output_path, cv2.VideoWriter_fourcc(*'MJPG'), 
-                             fps, (width, height))    
-
-    fps_list = []
-    frame_count = 0
-    total_time = 0.0
-
-    while cap.isOpened():
-        ret, frame = cap.read()
-        if not ret:
-            break
-            
-        start_time = time.time()
-        detections = detector.detect(input_image=frame, 
-                                     input_w=640, input_h=640, 
-                                     conf_thresh=0.45, nms_thresh=0.55)
-        
-        process_time = time.time() - start_time
-        current_fps = 1.0 / process_time if process_time > 0 else 0
-        
-        frame_count += 1
-        total_time += process_time
-        fps_list.append(current_fps)
-
-        image = draw_detections(frame, detections, current_fps)
-        writer.write(image)
-
-    cap.release()
-    writer.release()
-    
-    if frame_count > 0:
-        avg_fps = frame_count / total_time if total_time > 0 else 0
-        print(f"Processed {frame_count} frames")
-        print(f"Average FPS: {avg_fps:.2f}")
-        print(f"Min FPS: {min(fps_list):.2f}")
-        print(f"Max FPS: {max(fps_list):.2f}")
-
-
-if __name__ == "__main__":
-    detector = yolov5_trt.YOLOv5Detector("./weights/yolov5s.engine")
-    input_video = "./media/sample_720p.mp4"  
-    output_video = "./result.avi"  
-    main(input_video, output_video)
-```
 ```shell
 python yolov5_infer.py
 ```
 ```shell
-[11/06/2025-12:07:58] [I] [TRT] Loaded engine size: 8 MiB
+[11/06/2025-15:23:26] [I] [TRT] Loaded engine size: 7 MiB
 Deserialize yoloLayer plugin: YoloLayer
-[11/06/2025-12:08:00] [I] [TRT] [MemUsageChange] Init cuBLAS/cuBLASLt: CPU +536, GPU +601, now: CPU 824, GPU 4668 (MiB)
-[11/06/2025-12:08:00] [I] [TRT] [MemUsageChange] Init cuDNN: CPU +83, GPU +106, now: CPU 907, GPU 4774 (MiB)
-[11/06/2025-12:08:00] [I] [TRT] [MemUsageChange] TensorRT-managed allocation in engine deserialization: CPU +0, GPU +7, now: CPU 0, GPU 7 (MiB)
-[11/06/2025-12:08:00] [I] [TRT] [MemUsageChange] Init cuBLAS/cuBLASLt: CPU +0, GPU +1, now: CPU 907, GPU 4775 (MiB)
-[11/06/2025-12:08:00] [I] [TRT] [MemUsageChange] Init cuDNN: CPU +0, GPU +2, now: CPU 907, GPU 4777 (MiB)
-[11/06/2025-12:08:00] [I] [TRT] [MemUsageChange] TensorRT-managed allocation in IExecutionContext creation: CPU +0, GPU +11, now: CPU 0, GPU 18 (MiB)
+[11/06/2025-15:23:28] [I] [TRT] [MemUsageChange] Init cuBLAS/cuBLASLt: CPU +536, GPU +955, now: CPU 830, GPU 4470 (MiB)
+[11/06/2025-15:23:28] [I] [TRT] [MemUsageChange] Init cuDNN: CPU +83, GPU +149, now: CPU 913, GPU 4619 (MiB)
+[11/06/2025-15:23:28] [I] [TRT] [MemUsageChange] TensorRT-managed allocation in engine deserialization: CPU +0, GPU +7, now: CPU 0, GPU 7 (MiB)
+[11/06/2025-15:23:28] [I] [TRT] [MemUsageChange] Init cuBLAS/cuBLASLt: CPU +0, GPU +0, now: CPU 913, GPU 4620 (MiB)
+[11/06/2025-15:23:28] [I] [TRT] [MemUsageChange] Init cuDNN: CPU +0, GPU +3, now: CPU 913, GPU 4623 (MiB)
+[11/06/2025-15:23:28] [I] [TRT] [MemUsageChange] TensorRT-managed allocation in IExecutionContext creation: CPU +0, GPU +11, now: CPU 0, GPU 18 (MiB)
 Processed 1442 frames
-Average FPS: 104.38
-Min FPS: 37.09
-Max FPS: 116.60
+Average FPS: 127.51
+Min FPS: 75.75
+Max FPS: 134.67
 ```
