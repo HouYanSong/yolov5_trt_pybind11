@@ -53,10 +53,10 @@ RM = /usr/local/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/vsuav/workspace/yolov5_trt_pybind11
+CMAKE_SOURCE_DIR = /home/vsuav/yolov5_trt_pybind11
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/vsuav/workspace/yolov5_trt_pybind11/build
+CMAKE_BINARY_DIR = /home/vsuav/yolov5_trt_pybind11/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/build.dir/depend.make
@@ -71,10 +71,10 @@ include CMakeFiles/build.dir/flags.make
 
 CMakeFiles/build.dir/build.cu.o: CMakeFiles/build.dir/flags.make
 CMakeFiles/build.dir/build.cu.o: CMakeFiles/build.dir/includes_CUDA.rsp
-CMakeFiles/build.dir/build.cu.o: /home/vsuav/workspace/yolov5_trt_pybind11/build.cu
+CMakeFiles/build.dir/build.cu.o: /home/vsuav/yolov5_trt_pybind11/build.cu
 CMakeFiles/build.dir/build.cu.o: CMakeFiles/build.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vsuav/workspace/yolov5_trt_pybind11/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CUDA object CMakeFiles/build.dir/build.cu.o"
-	/usr/local/cuda/bin/nvcc -forward-unknown-to-host-compiler $(CUDA_DEFINES) $(CUDA_INCLUDES) $(CUDA_FLAGS) -MD -MT CMakeFiles/build.dir/build.cu.o -MF CMakeFiles/build.dir/build.cu.o.d -x cu -c /home/vsuav/workspace/yolov5_trt_pybind11/build.cu -o CMakeFiles/build.dir/build.cu.o
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vsuav/yolov5_trt_pybind11/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CUDA object CMakeFiles/build.dir/build.cu.o"
+	/usr/local/cuda/bin/nvcc -forward-unknown-to-host-compiler $(CUDA_DEFINES) $(CUDA_INCLUDES) $(CUDA_FLAGS) -MD -MT CMakeFiles/build.dir/build.cu.o -MF CMakeFiles/build.dir/build.cu.o.d -x cu -c /home/vsuav/yolov5_trt_pybind11/build.cu -o CMakeFiles/build.dir/build.cu.o
 
 CMakeFiles/build.dir/build.cu.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CUDA source to CMakeFiles/build.dir/build.cu.i"
@@ -87,7 +87,7 @@ CMakeFiles/build.dir/build.cu.s: cmake_force
 CMakeFiles/build.dir/usr/src/tensorrt/samples/common/logger.cpp.o: CMakeFiles/build.dir/flags.make
 CMakeFiles/build.dir/usr/src/tensorrt/samples/common/logger.cpp.o: /usr/src/tensorrt/samples/common/logger.cpp
 CMakeFiles/build.dir/usr/src/tensorrt/samples/common/logger.cpp.o: CMakeFiles/build.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vsuav/workspace/yolov5_trt_pybind11/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/build.dir/usr/src/tensorrt/samples/common/logger.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vsuav/yolov5_trt_pybind11/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/build.dir/usr/src/tensorrt/samples/common/logger.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/build.dir/usr/src/tensorrt/samples/common/logger.cpp.o -MF CMakeFiles/build.dir/usr/src/tensorrt/samples/common/logger.cpp.o.d -o CMakeFiles/build.dir/usr/src/tensorrt/samples/common/logger.cpp.o -c /usr/src/tensorrt/samples/common/logger.cpp
 
 CMakeFiles/build.dir/usr/src/tensorrt/samples/common/logger.cpp.i: cmake_force
@@ -101,7 +101,7 @@ CMakeFiles/build.dir/usr/src/tensorrt/samples/common/logger.cpp.s: cmake_force
 CMakeFiles/build.dir/usr/src/tensorrt/samples/common/sampleUtils.cpp.o: CMakeFiles/build.dir/flags.make
 CMakeFiles/build.dir/usr/src/tensorrt/samples/common/sampleUtils.cpp.o: /usr/src/tensorrt/samples/common/sampleUtils.cpp
 CMakeFiles/build.dir/usr/src/tensorrt/samples/common/sampleUtils.cpp.o: CMakeFiles/build.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vsuav/workspace/yolov5_trt_pybind11/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/build.dir/usr/src/tensorrt/samples/common/sampleUtils.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vsuav/yolov5_trt_pybind11/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/build.dir/usr/src/tensorrt/samples/common/sampleUtils.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/build.dir/usr/src/tensorrt/samples/common/sampleUtils.cpp.o -MF CMakeFiles/build.dir/usr/src/tensorrt/samples/common/sampleUtils.cpp.o.d -o CMakeFiles/build.dir/usr/src/tensorrt/samples/common/sampleUtils.cpp.o -c /usr/src/tensorrt/samples/common/sampleUtils.cpp
 
 CMakeFiles/build.dir/usr/src/tensorrt/samples/common/sampleUtils.cpp.i: cmake_force
@@ -147,7 +147,7 @@ build: /usr/lib/aarch64-linux-gnu/libopencv_imgcodecs.so.4.5.4
 build: /usr/lib/aarch64-linux-gnu/libopencv_imgproc.so.4.5.4
 build: /usr/lib/aarch64-linux-gnu/libopencv_core.so.4.5.4
 build: CMakeFiles/build.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/vsuav/workspace/yolov5_trt_pybind11/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable build"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/vsuav/yolov5_trt_pybind11/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable build"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/build.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -159,6 +159,6 @@ CMakeFiles/build.dir/clean:
 .PHONY : CMakeFiles/build.dir/clean
 
 CMakeFiles/build.dir/depend:
-	cd /home/vsuav/workspace/yolov5_trt_pybind11/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/vsuav/workspace/yolov5_trt_pybind11 /home/vsuav/workspace/yolov5_trt_pybind11 /home/vsuav/workspace/yolov5_trt_pybind11/build /home/vsuav/workspace/yolov5_trt_pybind11/build /home/vsuav/workspace/yolov5_trt_pybind11/build/CMakeFiles/build.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/vsuav/yolov5_trt_pybind11/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/vsuav/yolov5_trt_pybind11 /home/vsuav/yolov5_trt_pybind11 /home/vsuav/yolov5_trt_pybind11/build /home/vsuav/yolov5_trt_pybind11/build /home/vsuav/yolov5_trt_pybind11/build/CMakeFiles/build.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/build.dir/depend
 

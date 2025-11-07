@@ -1,4 +1,4 @@
-CMakeFiles/yolo_utils.dir/utils/preprocess.cu.o : /home/vsuav/workspace/yolov5_trt_pybind11/utils/preprocess.cu \
+CMakeFiles/yolo_utils.dir/utils/preprocess.cu.o : /home/vsuav/yolov5_trt_pybind11/utils/preprocess.cu \
     /usr/include/stdc-predef.h \
     /usr/local/cuda/include/cuda_runtime.h \
     /usr/local/cuda/include/crt/host_config.h \
@@ -155,7 +155,7 @@ CMakeFiles/yolo_utils.dir/utils/preprocess.cu.o : /home/vsuav/workspace/yolov5_t
     /usr/local/cuda/include/texture_indirect_functions.h \
     /usr/local/cuda/include/surface_indirect_functions.h \
     /usr/local/cuda/include/device_launch_parameters.h \
-    /home/vsuav/workspace/yolov5_trt_pybind11/utils/preprocess.h \
+    /home/vsuav/yolov5_trt_pybind11/utils/preprocess.h \
     /usr/include/c++/9/cstdint \
     /usr/lib/gcc/aarch64-linux-gnu/9/include/stdint.h \
     /usr/include/stdint.h \
@@ -425,5 +425,5 @@ CMakeFiles/yolo_utils.dir/utils/preprocess.cu.o : /home/vsuav/workspace/yolov5_t
     /usr/include/opencv4/opencv2/video.hpp \
     /usr/include/opencv4/opencv2/video/tracking.hpp \
     /usr/include/opencv4/opencv2/video/background_segm.hpp \
-    /home/vsuav/workspace/yolov5_trt_pybind11/utils/cuda_utils.h \
-    /home/vsuav/workspace/yolov5_trt_pybind11/utils/config.h
+    /home/vsuav/yolov5_trt_pybind11/utils/cuda_utils.h \
+    /home/vsuav/yolov5_trt_pybind11/utils/config.h

@@ -1,9 +1,9 @@
 CMakeFiles/yolo_utils.dir/utils/postprocess.cpp.o: \
- /home/vsuav/workspace/yolov5_trt_pybind11/utils/postprocess.cpp \
+ /home/vsuav/yolov5_trt_pybind11/utils/postprocess.cpp \
  /usr/include/stdc-predef.h \
- /home/vsuav/workspace/yolov5_trt_pybind11/utils/postprocess.h \
- /home/vsuav/workspace/yolov5_trt_pybind11/utils/types.h \
- /home/vsuav/workspace/yolov5_trt_pybind11/utils/config.h \
+ /home/vsuav/yolov5_trt_pybind11/utils/postprocess.h \
+ /home/vsuav/yolov5_trt_pybind11/utils/types.h \
+ /home/vsuav/yolov5_trt_pybind11/utils/config.h \
  /usr/include/opencv4/opencv2/opencv.hpp \
  /usr/include/opencv4/opencv2/opencv_modules.hpp \
  /usr/include/opencv4/opencv2/core.hpp \
@@ -319,8 +319,8 @@ CMakeFiles/yolo_utils.dir/utils/postprocess.cpp.o: \
  /usr/include/opencv4/opencv2/video.hpp \
  /usr/include/opencv4/opencv2/video/tracking.hpp \
  /usr/include/opencv4/opencv2/video/background_segm.hpp \
- /home/vsuav/workspace/yolov5_trt_pybind11/utils/utils.h \
- /usr/include/dirent.h /usr/include/aarch64-linux-gnu/bits/dirent.h \
+ /home/vsuav/yolov5_trt_pybind11/utils/utils.h /usr/include/dirent.h \
+ /usr/include/aarch64-linux-gnu/bits/dirent.h \
  /usr/include/aarch64-linux-gnu/bits/dirent_ext.h \
  /usr/include/c++/9/fstream \
  /usr/include/aarch64-linux-gnu/c++/9/bits/basic_file.h \

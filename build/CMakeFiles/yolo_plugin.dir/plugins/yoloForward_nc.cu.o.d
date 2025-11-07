@@ -1,4 +1,4 @@
-CMakeFiles/yolo_plugin.dir/plugins/yoloForward_nc.cu.o : /home/vsuav/workspace/yolov5_trt_pybind11/plugins/yoloForward_nc.cu \
+CMakeFiles/yolo_plugin.dir/plugins/yoloForward_nc.cu.o : /home/vsuav/yolov5_trt_pybind11/plugins/yoloForward_nc.cu \
     /usr/include/stdc-predef.h \
     /usr/local/cuda/include/cuda_runtime.h \
     /usr/local/cuda/include/crt/host_config.h \

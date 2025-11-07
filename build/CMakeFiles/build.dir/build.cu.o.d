@@ -1,4 +1,4 @@
-CMakeFiles/build.dir/build.cu.o : /home/vsuav/workspace/yolov5_trt_pybind11/build.cu \
+CMakeFiles/build.dir/build.cu.o : /home/vsuav/yolov5_trt_pybind11/build.cu \
     /usr/include/stdc-predef.h \
     /usr/local/cuda/include/cuda_runtime.h \
     /usr/local/cuda/include/crt/host_config.h \
@@ -345,8 +345,8 @@ CMakeFiles/build.dir/build.cu.o : /home/vsuav/workspace/yolov5_trt_pybind11/buil
     /usr/include/c++/9/climits \
     /usr/include/c++/9/functional \
     /usr/include/c++/9/bits/std_function.h \
-    /home/vsuav/workspace/yolov5_trt_pybind11/utils/config.h \
-    /home/vsuav/workspace/yolov5_trt_pybind11/utils/preprocess.h \
+    /home/vsuav/yolov5_trt_pybind11/utils/config.h \
+    /home/vsuav/yolov5_trt_pybind11/utils/preprocess.h \
     /usr/include/opencv4/opencv2/opencv.hpp \
     /usr/include/opencv4/opencv2/opencv_modules.hpp \
     /usr/include/opencv4/opencv2/core.hpp \

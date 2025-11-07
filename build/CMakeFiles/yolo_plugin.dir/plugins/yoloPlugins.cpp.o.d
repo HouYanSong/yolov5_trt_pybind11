@@ -1,7 +1,7 @@
 CMakeFiles/yolo_plugin.dir/plugins/yoloPlugins.cpp.o: \
- /home/vsuav/workspace/yolov5_trt_pybind11/plugins/yoloPlugins.cpp \
+ /home/vsuav/yolov5_trt_pybind11/plugins/yoloPlugins.cpp \
  /usr/include/stdc-predef.h \
- /home/vsuav/workspace/yolov5_trt_pybind11/plugins/yoloPlugins.h \
+ /home/vsuav/yolov5_trt_pybind11/plugins/yoloPlugins.h \
  /usr/include/c++/9/cassert \
  /usr/include/aarch64-linux-gnu/c++/9/bits/c++config.h \
  /usr/include/aarch64-linux-gnu/c++/9/bits/os_defines.h \

@@ -1,4 +1,4 @@
-CMakeFiles/yolov5_trt.dir/yolov5_infer.cu.o : /home/vsuav/workspace/yolov5_trt_pybind11/yolov5_infer.cu \
+CMakeFiles/yolov5_trt.dir/yolov5_infer.cu.o : /home/vsuav/yolov5_trt_pybind11/yolov5_infer.cu \
     /usr/include/stdc-predef.h \
     /usr/local/cuda/include/cuda_runtime.h \
     /usr/local/cuda/include/crt/host_config.h \
@@ -344,7 +344,7 @@ CMakeFiles/yolov5_trt.dir/yolov5_infer.cu.o : /home/vsuav/workspace/yolov5_trt_p
     /usr/include/c++/9/climits \
     /usr/include/c++/9/functional \
     /usr/include/c++/9/bits/std_function.h \
-    /home/vsuav/workspace/yolov5_trt_pybind11/utils/preprocess.h \
+    /home/vsuav/yolov5_trt_pybind11/utils/preprocess.h \
     /usr/include/opencv4/opencv2/opencv.hpp \
     /usr/include/opencv4/opencv2/opencv_modules.hpp \
     /usr/include/opencv4/opencv2/core.hpp \
@@ -458,10 +458,10 @@ CMakeFiles/yolov5_trt.dir/yolov5_infer.cu.o : /home/vsuav/workspace/yolov5_trt_p
     /usr/include/opencv4/opencv2/video.hpp \
     /usr/include/opencv4/opencv2/video/tracking.hpp \
     /usr/include/opencv4/opencv2/video/background_segm.hpp \
-    /home/vsuav/workspace/yolov5_trt_pybind11/utils/postprocess.h \
-    /home/vsuav/workspace/yolov5_trt_pybind11/utils/types.h \
-    /home/vsuav/workspace/yolov5_trt_pybind11/utils/config.h \
-    /home/vsuav/workspace/yolov5_trt_pybind11/utils/utils.h \
+    /home/vsuav/yolov5_trt_pybind11/utils/postprocess.h \
+    /home/vsuav/yolov5_trt_pybind11/utils/types.h \
+    /home/vsuav/yolov5_trt_pybind11/utils/config.h \
+    /home/vsuav/yolov5_trt_pybind11/utils/utils.h \
     /usr/include/dirent.h \
     /usr/include/aarch64-linux-gnu/bits/dirent.h \
     /usr/include/aarch64-linux-gnu/bits/dirent_ext.h \
