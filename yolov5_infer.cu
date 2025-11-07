@@ -149,7 +149,7 @@ public:
         // 返回检测结果
         py::list result_list;
         for (size_t j = 0; j < bboxs.size(); j++) {
-            cv::Rect r = get_rect(frame, bboxs[j].bbox);
+            cv::Rect r = get_rect(frame, bboxs[j].bbox, input_w, input_h);
             py::dict detection;
             detection["class_id"] = (int)bboxs[j].class_id;
             detection["confidence"] = (float)bboxs[j].conf;
