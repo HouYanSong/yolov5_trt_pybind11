@@ -318,3 +318,6 @@ Average FPS: 127.51
 Min FPS: 75.75
 Max FPS: 134.67
 ```
+
+### ByteTrack Pybind11
+[ByteTrack-Pybind11: 高性能实时目标跟踪解决方案 🚀](https://github.com/HouYanSong/bytetrack_pybind11)
