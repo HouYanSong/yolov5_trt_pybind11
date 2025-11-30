@@ -25,6 +25,21 @@ rm -fr build
 cmake -S . -B build
 cmake --build build
 ```
+```sh
+#!/bin/bash
+
+cd "$(dirname "$0")"
+
+rm -rf build
+mkdir build && cd build
+
+# 关键：指定正确的 pybind11_DIR 路径
+cmake -S .. -B . \
+  -DPYTHON_EXECUTABLE=/home/jetson/miniconda3/bin/python \
+  -Dpybind11_DIR=/home/jetson/miniconda3/lib/python3.8/site-packages/pybind11/share/cmake/pybind11
+
+cmake --build .
+```
 
 ### 2. Model quantization
 ```shell
